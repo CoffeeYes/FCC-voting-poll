@@ -1,0 +1,6 @@
+include ../includes/header.pug
+
+.polls-container
+  each item in poll_array
+    a.all-polls-item(href="/poll/" + item.link)
+      li=item.title

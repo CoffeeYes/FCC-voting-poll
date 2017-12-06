@@ -1,0 +1,13 @@
+include ../includes/header.pug
+
+link(rel="stylesheet",href="/style.css")
+.mypolls-list
+  each item in user_polls
+    .mypolls-item
+      a.mypolls-link(href="/poll/" + item.link)
+        li=item.title
+        a.fb-link(href="https://www.facebook.com/sharer/sharer.php?u=" + "https://mint-duck.glitch.me/poll/" + item.link) Share On Facebook
+        form.del-poll(action="/delete-poll",method="post")
+          button.del-poll-btn(name="delete_button",value=item.link) [X]
+        a.edit-link(href="/edit-poll/" + item.link)
+          button edit

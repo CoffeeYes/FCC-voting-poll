@@ -1,0 +1,12 @@
+extends index.pug
+block content
+  .signup-box
+    p.error-message=error
+    form.signup-form(name="signup-form",method="post",action="/signup")
+      label Username
+        input(type="text",name="user")
+      label email
+        input(type="text",name="email")
+      label Password
+        input(type="password",name="pass")
+      input(type="submit")

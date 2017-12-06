@@ -1,0 +1,8 @@
+include ../includes/header.pug
+
+form.edit-poll(action="/edit-poll",method="post")
+  - var i = 1
+  each item in poll_arr
+    input(value=item.name,name="option" + i)
+    - i++
+  button(name="submit-link" value=poll_link) Submit

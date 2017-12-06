@@ -1,0 +1,24 @@
+header
+      link(rel="stylesheet",href="/style.css")
+      .nav
+        h1 
+          a(href="/") home
+        ul.navbar
+          if !currentUser
+            li
+              a(href="/signup",id="signup") Signup
+            li
+              a(href="/login",id="login") Login
+          if currentUser
+            li
+              a(href="/logout") Logout
+            li
+              a(href="/polls") My Polls
+            li
+              a(href="/test") create poll
+          li
+            a(href="/all-polls") All Polls
+      script(type="text/javascript",src="https://www.gstatic.com/charts/loader.js")
+      script(type="text/javascript",src=" https://code.jquery.com/jquery-3.2.1.min.js")
+      script(src="/client.js")
+      
