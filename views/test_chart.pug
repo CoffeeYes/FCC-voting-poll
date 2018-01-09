@@ -1,0 +1,42 @@
+include ../includes/header.pug
+
+link(rel="stylesheet",href="/style.css")
+script(type="text/javascript",src="https://www.gstatic.com/charts/loader.js")
+script(type="text/javascript").
+  // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+  
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        
+        //add a row for each option the user passed in
+        for(i=1;i<!{poll_obj_length} - 1;i++) {
+          data.addRow([!{poll_obj}["option" + i].name,!{poll_obj}["option" + i].count])
+        }
+        
+        // Set chart options
+        var options = {'title': "!{title}",
+                       'width':500,
+                       'height':400};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+.chart-container
+  #chart_div
+  - var i = 1
+  form.chart-buttons(action="/chart-inc",method="post")
+    each item in poll_arr
+      button(name="option",value="option" + i + "__" + poll_link)=item.name
+      - i++

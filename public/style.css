@@ -1,0 +1,213 @@
+/* styles */
+/* called by your view template */
+
+/* You might want to try something fancier: */
+/* less: http://lesscss.org/ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 25px;
+}
+
+h1 {
+  font-weight: bold;
+  color: pink;
+  width: 0 auto;
+  float: left;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+p {
+  max-width: 600px;
+}
+
+form {
+  padding: 15px;
+  background-color: cyan;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+button {
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: lightgrey;
+  border: 1px solid grey;
+  box-shadow: 2px 2px teal;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: yellow;
+}
+
+button:active {
+  box-shadow: none;
+}
+
+header {
+  border-bottom: 2px solid black;
+  position: absolute;
+  width: 100%;
+}
+
+li {
+  display: inline;
+  padding-right: 10px;
+}
+
+footer {
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid lightgrey;
+}
+
+footer > a {
+  color: #BBBBBB;
+}
+
+.nicejob {
+  text-decoration: line-through;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  float: right;
+  margin-right: 5em;
+}
+.signup-box {
+  z-index: 999;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  border: 2px solid black;
+  width: 400px;
+  height: 400px;
+  justify-content: center;
+}
+
+.signup-form {
+  margin-top: 2em;
+  margin-left: 5em;
+}
+
+.signup-close {
+  float:right;
+  margin-right: 20px;
+}
+
+.login-box {
+  position: absolute;
+  margin-left: 45em;
+  margin-top: 20em;
+  width: 300px;
+  height: 300px;
+  border: 2px solid black;
+}
+.login-form {
+  margin-top: 2em;
+  margin-left: 2em;
+}
+
+.create-poll-container {
+  width: 500px;
+  height: 500px;
+  margin-top: 20em;
+  margin-left: 40em;
+  border: 2px solid black;
+  position: absolute;
+}
+
+.create-poll-form {
+  margin-top: 7em;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+}
+
+.mypolls-list {
+  margin-left: 50em;
+  margin-top: 10em;
+  position: absolute;
+}
+
+.mypolls-item {
+  border: 2px solid black;
+  padding: 10px 20px 0px 20px;
+  margin-top: 1em;
+}
+
+.fb-link {
+  background-color: blue;
+  color: white;
+  padding: 17.5px 3px 17.5px 3px;
+  float: right;
+}
+
+.polls-container {
+  margin-top: 10em;
+  position: absolute;
+  margin-left: 50em;
+}
+
+.all-polls-item {
+  border: 2px solid black;
+  display: block;
+  margin-top: 0.5em;
+  padding: 10px 50px 10px 50px;
+  text-align: center;
+}
+
+.test-container {
+  margin-top : 10em;
+  margin-left: 50em;
+  position: absolute;
+}
+
+.submit-form {
+  display: block;
+}
+
+.chart-container {
+  position: absolute;
+  margin-top: 10em;
+  margin-left: 45em;
+}
+
+.chart-buttons { 
+  text-align: center;
+  margin-left: 7.5em;
+}
+
+.edit-poll {
+  position:absolute;
+  margin-top: 10em;
+  margin-left: 45em;
+}

@@ -1,0 +1,14 @@
+include ../includes/header.pug
+.test-container
+  form.test-form(action="/create-test",method="post")
+    p.error-message=error
+    label Title
+      input(name="title")
+    label option 1
+      input(name="option1")
+    label option 2
+      input(name="option2")
+    button.submit-btn(type="submit") Submit
+
+  button.add-input Add field
+  button.remove-input remove field

@@ -1,0 +1,11 @@
+.create-poll-container
+  h1 New Poll
+  form.create-poll-form(action="create-poll",method="post")
+    p.error-message=error
+    label Poll Title
+      input(type="text",name="poll-title")
+    label Option 1
+      input(type="text",name="poll-option-1")
+    label Option 2
+      input(type="text",name="poll-option-2")
+    input(type="submit")
